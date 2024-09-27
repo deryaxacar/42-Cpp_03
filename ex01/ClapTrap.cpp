@@ -23,7 +23,7 @@ ClapTrap::ClapTrap(const ClapTrap& copy)
 }
 ClapTrap::~ClapTrap()
 {
-    std::cout << this->getName()<<": Destructor call" << std::endl;
+    std::cout << this->getName() <<": Destructor call" << std::endl;
 }
 ClapTrap& ClapTrap::operator=(const ClapTrap& copy)
 {
@@ -59,48 +59,41 @@ int ClapTrap::getAttackDamage() const
 
 void ClapTrap::attack(const std::string& target)
 {
-    if(this->hitPoint < 0)
-        return;
-    if(this->energyPoint < 0)
-    {
-        std::cout << this->name << "energy decreased \n";
-        return;
-    }
+    if(this->hitPoint <= 0 || this->energyPoint <= 0)
+	{
+		std::cout << "I cannot do anything" << std::endl;
+		return ;
+	}
+
     if(this->energyPoint > 0 && hitPoint > 0)
     {
         std::cout << this->name << " attack " << target << " causing " << this->attackDamage << "  damage!\n"; 
         this->energyPoint--;
     }
 }
+
 void ClapTrap::takeDamage(unsigned int amount)
 {
+	if(this->hitPoint <= 0 || this->energyPoint <= 0)
+	{
+		std::cout << "I cannot do anything" << std::endl;
+		return ;
+	}
+	std::cout << "ClapTrap " << name << "take damage " << amount << std::endl;
+	attackDamage += amount;
+
     if (this->hitPoint <= 0)
-        return;
-
-    int actualDamage = std::min(static_cast<int>(amount), this->hitPoint);
-    this->hitPoint -= actualDamage;
-
-    std::cout << this->name << " has taken " << actualDamage << " damage!" << std::endl;
-
-    if (this->hitPoint <= 0)
-    {
         std::cout << this->name << " die..\n";
-    }
-    else
-    {
-        std::cout << getName() << " remaining Hitpoints: " << hitPoint << std::endl;
-    }
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-    if(this->hitPoint <= 0)
-        return;
-    if(this->energyPoint < 0)
-    {
-        std::cout << this->name << " no energy!\n";
-        return;
-    }
+    if(this->hitPoint <= 0 || this->energyPoint <= 0)
+	{
+		std::cout << "I cannot do anything" << std::endl;
+		return ;
+	}
+
     if(this->energyPoint > 0 && (int)amount >= 0)
     {
         std::cout << this->name << " healed " << amount << " point\n";

@@ -17,15 +17,15 @@
 
 class ScavTrap : public ClapTrap
 {
-private:
-public:
-    ScavTrap();
-    ScavTrap(std::string name);
-    ScavTrap(const ScavTrap& copy);
-    ScavTrap& operator=(const ScavTrap& copy);
-    ~ScavTrap();
-    void guardGate();
-    void attack(const std::string& target);
+    private:
+    public:
+        ScavTrap();
+        ScavTrap(std::string name);
+        ScavTrap(const ScavTrap& copy);
+        ScavTrap& operator=(const ScavTrap& copy);
+        ~ScavTrap();
+        void guardGate();
+        void attack(const std::string& target);
 };
 
 #endif
