@@ -3,7 +3,7 @@
 
 </div>
 <p align="center" >
-    Bu proje, nesne yönelimli programlama prensiplerini kullanarak temel bir oyun karakteri simülasyonu gerçekleştirmektedir. 
+    Bu proje, nesne yönelimli programlama (OOP) prensiplerini kullanarak temel bir oyun karakteri simülasyonu gerçekleştirmektedir. 
   `ClapTrap`, `ScavTrap` ve `FragTrap` sınıfları, karakterlerin özelliklerini ve yeteneklerini modellemek amacıyla 
   miras alma (inheritance) özelliğinden faydalanmaktadır. Her bir sınıf, kendine özgü özellikler ve metotlar içerirken, 
   üst sınıfın (ClapTrap) temel işlevselliğinden yararlanmaktadır. 
