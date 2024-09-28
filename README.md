@@ -3,7 +3,10 @@
 
 </div>
 <p align="center" >
-    
+    Bu proje, nesne yönelimli programlama prensiplerini kullanarak temel bir oyun karakteri simülasyonu gerçekleştirmektedir. 
+  `ClapTrap`, `ScavTrap` ve `FragTrap` sınıfları, karakterlerin özelliklerini ve yeteneklerini modellemek amacıyla 
+  miras alma (inheritance) özelliğinden faydalanmaktadır. Her bir sınıf, kendine özgü özellikler ve metotlar içerirken, 
+  üst sınıfın (ClapTrap) temel işlevselliğinden yararlanmaktadır. 
   </p>
 
 
@@ -11,7 +14,7 @@
 - [Ex00 - Aaaaand... OPEN!](#ex00---aaaaand-open)
 - [Ex01 - Serena, my love!](#ex01---serena-my-love)
 - [Ex02 - Repetitive work](#ex02---repetitive-work)
-- [Miras Alma Nedir?](#miras-alma-nedir)
+- [Miras Alma (inheritance) Nedir?](#miras-alma-inheritance-nedir)
 
 ---
 
@@ -209,8 +212,8 @@
 
 ---
 
-<a name="miras-alma-nedir"></a>
-## Miras Alma Nedir?
+<a name="miras-alma-inheritance-nedir"></a>
+## Miras Alma (inheritance) Nedir?
 
 ### Tanım
 Miras alma, nesne yönelimli programlamada (OOP) kullanılan bir kavramdır. Bir sınıfın (üst sınıf) özelliklerinin (değişkenler ve metotlar) başka bir sınıf (alt sınıf) tarafından devralınması anlamına gelir. Bu, kodun yeniden kullanılabilirliğini artırır ve daha temiz, düzenli bir yapı sağlar.
