@@ -215,8 +215,7 @@
 <a name="miras-alma-inheritance-nedir"></a>
 ## Miras Alma (inheritance) Nedir?
 
-### Tanım
-Miras alma, nesne yönelimli programlamada (OOP) kullanılan bir kavramdır. Bir sınıfın (üst sınıf) özelliklerinin (değişkenler ve metotlar) başka bir sınıf (alt sınıf) tarafından devralınması anlamına gelir. Bu, kodun yeniden kullanılabilirliğini artırır ve daha temiz, düzenli bir yapı sağlar.
+Miras alma (inheritance), nesne yönelimli programlamada (OOP) kullanılan bir kavramdır. Bir sınıfın (üst sınıf) özelliklerinin (değişkenler ve metotlar) başka bir sınıf (alt sınıf) tarafından devralınması anlamına gelir. Bu, kodun yeniden kullanılabilirliğini artırır ve daha temiz, düzenli bir yapı sağlar.
 
 ### Temel Kavramlar
 
