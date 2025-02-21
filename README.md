@@ -251,5 +251,6 @@ Miras alma (inheritance), nesne yönelimli programlamada (OOP) kullanılan bir k
 Yukarıdaki örnekte ScavTrap, ClapTrap sınıfından miras alır ve attack() metodunu devralır, ayrıca kendi özel metodunu tanımlar.
 
 ---
-Bu README dosyası Derya ACAR tarafından hazırlanmıştır.
+
+<p align="center">© 2025 This project was created by Derya ACAR.</p>
 
