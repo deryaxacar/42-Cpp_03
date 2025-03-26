@@ -14,16 +14,16 @@
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
-    this->setVar(name,100,100,30);
-    std::cout << this->getName() << ": FragTrap Constructor call\n";
+    this->setVar(name, 100, 100, 30);
+    std::cout << this->getName() << ": FragTrap Constructor call" << std::endl;
 }
 FragTrap::~FragTrap()
 {
-    std::cout << this->getName() << ": FragTrap Destructor call\n";
+    std::cout << this->getName() << ": FragTrap Destructor call" << std::endl;
 }
 void FragTrap::highFivesGuys(void)
 {
-    if(this->getHitPoint() <= 0)
+    if (this->getHitPoint() <= 0)
         return;
-    std::cout << this->getName() << ": GİVE ME A FİVER, MAN!\n";
+    std::cout << this->getName() << ": GİVE ME A FİVER, MAN!" << std::endl;
 }

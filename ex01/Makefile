@@ -12,23 +12,29 @@
 
 SRC = main.cpp ClapTrap.cpp ScavTrap.cpp
 OBJ = $(SRC:.cpp=.o)
-CC = c++
+CXX = c++
 RM = rm -f
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 NAME = ScavTrap
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@$(CC) $(CPPFLAGS) $(OBJ) -o $(NAME)
+	@$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
+	@echo "\033[0;32mDone\033[m"
 
 clean:
-	@$(RM) $(OBJ)
+	@$(RM) $(OBJ) $(NAME)
+	@echo "\033[0;34mclean\033[m"
+
+%.o: %.cpp
+	@$(CXX) $(CXXFLAGS) -c $< -o $@
 
 fclean: clean
 	@$(RM) $(NAME)
-	
+	@echo "\033[0;36mfclean\033[m"
+
 re: fclean $(NAME)
 
 .PHONY: all clean fclean re

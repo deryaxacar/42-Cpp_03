@@ -12,34 +12,34 @@
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(){}
+ScavTrap::ScavTrap() {}
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
-    this->setVar(name,100,50,20);
-    std::cout << this->getName() <<": ScavTrap Constructor call\n";
+    this->setVar(name, 100, 50, 20);
+    std::cout << this->getName() << ": ScavTrap Constructor call" << std::endl;
 }
-ScavTrap::ScavTrap(const ScavTrap& copy)
+ScavTrap::ScavTrap(const ScavTrap &copy) : ClapTrap(copy)
 {
     *this = copy;
 }
 ScavTrap::~ScavTrap()
 {
-    std::cout << this->getName() << ": ScavTrap Destructor call\n";
+    std::cout << this->getName() << ": ScavTrap Destructor call" << std::endl;
 }
-ScavTrap& ScavTrap::operator=(const ScavTrap& copy)
+ScavTrap &ScavTrap::operator=(const ScavTrap &copy)
 {
-    this->setVar(copy.getName(), copy.getHitPoint(),copy.getEnergyPoint(),copy.getAttackDamage());
+    this->setVar(copy.getName(), copy.getHitPoint(), copy.getEnergyPoint(), copy.getAttackDamage());
     return *this;
 }
 
-void ScavTrap::attack(const std::string& target)
+void ScavTrap::attack(const std::string &target)
 {
     if (this->hitPoint <= 0)
-        return ;
+        return;
     if (this->energyPoint <= 0)
     {
-        std::cout << "ScavTrap " << this->name <<  " energy decreased " << std::endl;
-        return ;
+        std::cout << "ScavTrap " << this->name << " energy decreased " << std::endl;
+        return;
     }
     std::cout << "ScavTrap " << this->name << " attacks " << target << ", causing " << this->attackDamage << " points of damage!" << std::endl;
     this->energyPoint = this->energyPoint - 1;
@@ -47,5 +47,5 @@ void ScavTrap::attack(const std::string& target)
 
 void ScavTrap::guardGate()
 {
-    std::cout << getName() << " ScavTrap is now in Gatekeeper mode.\n";
+    std::cout << getName() << " ScavTrap is now in Gatekeeper mode." << std::endl;
 }
